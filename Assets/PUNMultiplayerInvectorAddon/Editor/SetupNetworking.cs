@@ -25,13 +25,13 @@ public class SetupNetworking : EditorWindow
             GameObject _networkManager = new GameObject("NetworkManager");
             _networkManager.AddComponent<PUN_NetworkManager>();
             _networkManager.AddComponent<PUN_LobbyUI>();
-            _networkManager.GetComponent<PUN_NetworkManager>()._spawnPoint = _networkManager.transform;
+            _networkManager.GetComponent<PUN_NetworkManager>()._spawnPoint = _networkManager.transform[];
             _networkManager.AddComponent<PUN_ItemManager>();
         }
         else
         {
             PUN_NetworkManager _networkManager = FindObjectOfType<PUN_NetworkManager>();
-            _networkManager._spawnPoint = _networkManager.gameObject.transform;
+            _networkManager._spawnPoint = _networkManager.gameObject.transform[];
         }
     }
 

@@ -55,7 +55,7 @@ public class PUN_NetworkManager : MonoBehaviourPunCallbacks
     [Tooltip("The _prefab that will be spawned in when a player successfully connects.")]
     public GameObject _playerPrefab = null;
     [Tooltip("The point where the player will start when they have successfully connected.")]
-    public Transform _spawnPoint = null;
+    public Transform[] _spawnPoint ;
     [Tooltip("Shows the current connection process. This is great for UI to reference and use.")]
     public string _connectStatus = "";
     [Tooltip("Automatically sync all connected clients scenes. Make sure everyone is always on the same scene together.")]
@@ -452,7 +452,7 @@ public class PUN_NetworkManager : MonoBehaviourPunCallbacks
         _connectStatus = "Successfully joined a room";
         if (_playerPrefab != null)
         {
-            PhotonNetwork.Instantiate(_playerPrefab.name, _spawnPoint.position, _spawnPoint.rotation, 0);
+            PhotonNetwork.Instantiate(_playerPrefab.name, _spawnPoint[Random.Range(0,_spawnPoint.Length)].position, _spawnPoint[Random.Range(0,_spawnPoint.Length)].rotation, 0);
         }
         _customNetworkEvents._roomEvents._onJoinedRoom.Invoke();
         base.OnJoinedRoom();

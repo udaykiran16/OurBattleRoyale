@@ -4,6 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 public class PhotonRooms : MonoBehaviourPunCallbacks, IInRoomCallbacks
 {
@@ -17,6 +18,8 @@ public class PhotonRooms : MonoBehaviourPunCallbacks, IInRoomCallbacks
     private Player[] photonPlayers;
     public int playersInRoom;
     public int myNumberInRoom;
+
+    public int playerInGame;
 
     //Delayed Start
     private bool readyToCount;
@@ -187,9 +190,29 @@ public class PhotonRooms : MonoBehaviourPunCallbacks, IInRoomCallbacks
             {
                 PV.RPC("RPC_LoadedGameScene", RpcTarget.MasterClient);
             }
+            else
+            {
+                RPC_CreatePlayer();
+            }
 
 
         }
+    }
+
+    [PunRPC]
+    private void RPC_LoadedGameScene()
+    {
+        playerInGame++;
+        if (playerInGame == PhotonNetwork.PlayerList.Length)
+        {
+            PV.RPC("RPC_CreatePlayer", RpcTarget.All);
+        }
+    }
+
+    [PunRPC]
+    private void RPC_CreatePlayer()
+    {
+        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PhotonNetworkPlayer"), transform.position, transform.rotation,0);
     }
 
 

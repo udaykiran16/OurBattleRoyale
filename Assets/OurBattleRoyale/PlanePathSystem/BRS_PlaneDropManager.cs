@@ -1,116 +1,128 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 
 public class BRS_PlaneDropManager : MonoBehaviour
+
 {
-		[Header("Map Settings")]
-		public int MapSize = 8;
-		[Range(1,9)]
-		public int DropZoneRange = 8;
-		[Header("Plane Settings")]
-		public GameObject BRS_PlaneSpawn;
-		public float BRS_PlaneAltitude;
-		public float BRS_PlaneAirspeed = 100f;
+    //public GameObject EndPointBall;
+    [Header("Map Settings")]
+    public int _MapSize = 500;//the size of the traversable map
+    [Range(2, 9)]
+    public int DropZoneRange = 8;//how many different start/stop options should there be?
+    public int AcceptableDropZoneSize = 500;//how big should the zone be that the plane flies through
+    [Header("Plane Settings")]
+    public GameObject BRS_PlaneSpawn;//plane object (model) to spawn
+    public float BRS_PlaneAltitude; // how high does it fly?
 
-		private Vector3[] PD_L;
-		private Vector3[] PD_R;
-		public GameObject PlaneStart;
-		public GameObject PlaneStop;
-		private int startFlightIndex;
-		private int endFlightIndex;
-		public bool VerifiedPath = false;
+    public GameObject PlaneStart;//start marker
+    public GameObject PlaneStop;//end marker
+    public bool VerifiedPath = false;
 
-		void Start ()
-		{
-			PD_L = new Vector3[9];
-			PD_R = new Vector3[9];
+    private Vector3[] PD_L;//plane drop points left side
+    private Vector3[] PD_R;//plane drop points right side
 
-			var _MapSize = 8000;//MapSize * 500;
-			var setupPosition = new Vector3 (-_MapSize, BRS_PlaneAltitude, _MapSize);
+    private int spawnAttempts = 0;// used to track failures. app should pause or fail after this many fails
+    private int spawnAttemptsUntilFailure = 10;//default of ten tries
 
-			for(int i = 0; i < PD_L.Length; i++)
-			{
-				PD_L [i] = setupPosition;
-				setupPosition = new Vector3 (-_MapSize, BRS_PlaneAltitude, (setupPosition.z - 1000));
-			}
+    void Start()
+    {
+        //set possible start and end points
+        SetupStartAndEndPoints();
 
-				setupPosition = new Vector3 (_MapSize, BRS_PlaneAltitude, _MapSize);
+        //Get an acceptable flight path
+        SetupFlightPath();
+    }
 
-			for(int i = 0; i < PD_R.Length; i++)
-			{
-				PD_R [i] = setupPosition;
-				setupPosition = new Vector3 (_MapSize, BRS_PlaneAltitude, (setupPosition.z - 1000));
-			}
+    private void SetupStartAndEndPoints()
+    {
+        PD_L = new Vector3[DropZoneRange];
+        PD_R = new Vector3[DropZoneRange];
 
-			//Create the cylinder for flight check
-			GameObject ADZ = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
-			ADZ.transform.position = Vector3.zero;
-			//This value will be calculated in the future based on user preferences
-			ADZ.transform.localScale = new Vector3(_MapSize, _MapSize, _MapSize);
-			ADZ.name = "AcceptableDropZone";
+        //make sure this.gameObject is positioned in the center of the map
+        //start position is half the size of the map to the left of the map, 
+        //end position is half the size of the map to the right.
+        Vector3 setupPosition = new Vector3(this.transform.position.x - _MapSize / 2, BRS_PlaneAltitude, _MapSize);
 
-			//Get an acceptable flight path
-			SetupFlightPath();
-		}
+        for (int i = 0; i < PD_L.Length; i++)
+        {
+            PD_L[i] = setupPosition;
+            setupPosition = new Vector3(this.transform.position.x - _MapSize / 2, BRS_PlaneAltitude, (setupPosition.z - (_MapSize / DropZoneRange)));
+            //Instantiate(EndPointBall, setupPosition, Quaternion.identity); // create test object here to visually track spawn points
+        }
 
-		private void SetupFlightPath()
-		{
-			// Let's find a path that is certainly THROUGH the cylinder
-			Debug.Log("Start");
-			VerifiedPath = false;
-			int numberOfAttempts = 0;
-			Vector3 startFlight;
-			Vector3 endFlight;
+        setupPosition = new Vector3(this.transform.position.x + _MapSize / 2, BRS_PlaneAltitude, _MapSize);
 
-			do
-			{
-				Debug.Log("Planing optimal Route");
-				//Pick a Random startpoint
-				startFlightIndex = Random.Range(0, PD_L.Length);
-				startFlight = PD_L [startFlightIndex];
+        for (int i = 0; i < PD_R.Length; i++)
+        {
+            PD_R[i] = setupPosition;
+            setupPosition = new Vector3(_MapSize, BRS_PlaneAltitude, (setupPosition.z - (_MapSize / DropZoneRange)));
+            //Instantiate(EndPointBall, setupPosition, Quaternion.identity); // create test object here to visually track spawn points
+        }
 
-				//Pick a Random endpoint
-				endFlightIndex = Random.Range(0, PD_R.Length);
-				endFlight = PD_R [endFlightIndex];
+    }
 
-				PlaneStart.transform.position = startFlight;
-				PlaneStop.transform.position = endFlight;
-				PlaneStart.transform.LookAt (PlaneStop.transform);
+    private void SetupFlightPath()
+    {
+        // Let's find a path that is certainly THROUGH the cylinder
 
-				RaycastHit objectHit;
-				if (Physics.Raycast (PlaneStart.transform.position, PlaneStart.transform.forward, out objectHit, 8000))
-				{
+        //Create the cylinder for flight check
+        GameObject ADZ = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
+        ADZ.transform.position = this.gameObject.transform.position;//sets the position relative to this.gameObject.
+                                                                    //make sure this.gameObject is positioned in the center of the playable map
+        ADZ.transform.localScale = new Vector3(AcceptableDropZoneSize, AcceptableDropZoneSize, AcceptableDropZoneSize);//set the size of the cylinder to the size of the desired drop zone
+        ADZ.name = "AcceptableDropZone";//name this new cylinder
 
-					Debug.Log("Trying " + numberOfAttempts++ + " times");
-					if (objectHit.collider.gameObject.name == "AcceptableDropZone")
-					{
-						VerifiedPath = true;
-						Debug.Log ("Optimal Route Calculated");
-						GameObject.Destroy (objectHit.collider.gameObject);
-					}
-				}
-			} while (VerifiedPath != true);
-		}
+        //Debug.Log("Start");//print test
+        VerifiedPath = false;
 
-		// Update is called once per frame
-		void Update ()
-		{
+        do
+        {
+            Debug.Log("Planing optimal Route");
 
-		}
+            //Pick a Random startpoint from list
+            PlaneStart.transform.position = PD_L[Random.Range(0, PD_L.Length)];
+            //Pick a Random endpoint from list
+            PlaneStop.transform.position = PD_R[Random.Range(0, PD_R.Length)];
 
-		void LateUpdate()
-		{
-			if (VerifiedPath)
-			{
-				SpawnPlane ();
-			}
-		}
+            RaycastHit objectHit;
+            if (Physics.Raycast(PlaneStart.transform.position, PlaneStart.transform.forward, out objectHit, _MapSize))
+            {
 
-		void SpawnPlane()
-		{
-			PlaneStart.transform.LookAt (PD_R [endFlightIndex]);
-			Instantiate (BRS_PlaneSpawn, PlaneStart.transform.position, PlaneStart.transform.rotation);
-			VerifiedPath = false;
-		}
-	}
+                //Debug.Log("Trying " + numberOfAttempts++ + " times");
+                if (objectHit.collider.gameObject.name == "AcceptableDropZone")
+                {
+                    VerifiedPath = true;
+                    //Debug.Log("Optimal Route Calculated");
+                    //destroy the cylinder when done using it
+                    Destroy(objectHit.collider.gameObject);
+                }
+            }
+            //protect from infinite loop by only testing a certain number of times before quitting
+            ++spawnAttempts;
+            if (spawnAttempts > spawnAttemptsUntilFailure)
+            {
+                Debug.LogError("ERROR:  " + spawnAttempts.ToString() + "spawnAttempts with no success. Quitting.....");
+                Debug.Break();//stop the game
+            }
+        } while (VerifiedPath != true);
+
+    }
+
+    void LateUpdate()
+    {
+
+        if (VerifiedPath)
+        {
+            SpawnPlane();
+        }
+    }
+
+    void SpawnPlane()
+    {
+        PlaneStart.transform.LookAt(PlaneStop.transform);//point plane towards endpoint
+        Instantiate(BRS_PlaneSpawn, PlaneStart.transform.position, PlaneStart.transform.rotation);
+        VerifiedPath = false;//reset
+        //seppuku! this object is no longer needed
+        Destroy(this.gameObject);
+    }
+}

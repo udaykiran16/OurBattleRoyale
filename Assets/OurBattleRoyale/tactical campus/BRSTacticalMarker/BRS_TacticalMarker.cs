@@ -16,8 +16,8 @@ public class BRS_TacticalMarker : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		FPCamera = GetComponentInChildren<Camera>();
-		MinimapCamHeight = GameObject.Find ("MiniMap Camera").transform.position.y;
+		FPCamera = Camera.main;
+		MinimapCamHeight = GameObject.Find ("minimapcamera").transform.position.y;
 		markerOffset = MinimapCamHeight - 10.0f;
 	}
 

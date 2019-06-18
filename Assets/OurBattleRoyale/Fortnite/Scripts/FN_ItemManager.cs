@@ -170,7 +170,7 @@ public class FN_ItemManager : MonoBehaviour
 	void Update()
 	{
 		//If we are in range and we press the correct button
-		if(Input.GetKeyDown(PickUpButtonText) && inRange)
+		if(Input.GetKeyDown(KeyCode.M) && inRange)
 		{
 			//Gather inventory info
 
@@ -181,7 +181,7 @@ public class FN_ItemManager : MonoBehaviour
 			this.transform.localPosition = Vector3.zero;
 
 			//Add the item to our 
-			_IM.AddToInventory ();
+		//	_IM.AddToInventory ();
 
 			//Play the gathering animation
 			anim.SetTrigger ("addToInv");

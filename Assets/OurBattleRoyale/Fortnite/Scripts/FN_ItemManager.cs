@@ -34,12 +34,12 @@ public class FN_ItemManager : MonoBehaviour
 	public RawImage ItemBackground;
 
 	//Private variables
-	private TextMeshProUGUI[] TMPTexts;
-	private TextMeshProUGUI PickUpButton;
-	private TextMeshProUGUI TMP_ItemType;
-	private TextMeshProUGUI TMP_ItemName;
-	private TextMeshProUGUI TMP_ItemRarity;
-	private TextMeshProUGUI TMP_ItemAmount;
+	private TextMeshPro[] TMPTexts;
+	private TextMeshPro PickUpButton;
+	private TextMeshPro TMP_ItemType;
+	private TextMeshPro TMP_ItemName;
+	private TextMeshPro TMP_ItemRarity;
+	private TextMeshPro TMP_ItemAmount;
 
 	//NEW=================================================================
 	private GameObject _player;
@@ -67,7 +67,7 @@ public class FN_ItemManager : MonoBehaviour
 		//NEW=================================================================
 
 		//Get all of the Text Mesh Pros
-		TMPTexts = gameObject.GetComponentsInChildren<TextMeshProUGUI> ();
+		TMPTexts = gameObject.GetComponentsInChildren<TextMeshPro> ();
 
 		//Go through all the Texts and based upon what it is, set values
 		for (int i = 0; i < TMPTexts.Length; i++)

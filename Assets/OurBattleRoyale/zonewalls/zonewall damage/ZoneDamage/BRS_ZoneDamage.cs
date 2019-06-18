@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.PostProcessing;
+
 //---------------------------------------------------------------------------------------------------
 //This script is provided as a part of The Polygon Pilgrimage
 //Subscribe to https://www.youtube.com/user/mentallic3d for more great tutorials and helpful scripts!
@@ -12,10 +12,7 @@ public class BRS_ZoneDamage : MonoBehaviour
 	public GameObject player;
 	private string playername;
 
-	[Header("---Post Processing Objects---")]
-	public PostProcessingProfile outsideZonePPP;
-	public PostProcessingProfile standardPPP;
-	private PostProcessingBehaviour CamPPB;
+
 
 	[Header("---Zone Damage Parameters---")]
 	public float TickRate = 3.0f;
@@ -41,7 +38,7 @@ public class BRS_ZoneDamage : MonoBehaviour
 	{
 		//Get a handle to the Player
 		player = GameObject.FindGameObjectWithTag ("Player");
-		CamPPB = GameObject.Find ("FirstPersonCharacter").GetComponent<PostProcessingBehaviour> ();
+
 		playername = player.transform.name;
 
 		//Get a handle to the Player Health Manager
@@ -56,7 +53,7 @@ public class BRS_ZoneDamage : MonoBehaviour
 		//If we leave the zone, we will be damaged!
 		if (col.transform.name == playername)
 		{
-			CamPPB.profile = outsideZonePPP;
+
 			inZone = false;
 		}
 	}
@@ -66,7 +63,7 @@ public class BRS_ZoneDamage : MonoBehaviour
 		//If we are inside the zone, all is good!
 		if (col.transform.name == playername)
 		{
-			CamPPB.profile = standardPPP;
+
 			inZone = true;
 		}
 	}

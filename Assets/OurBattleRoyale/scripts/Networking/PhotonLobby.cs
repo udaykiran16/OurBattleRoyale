@@ -30,6 +30,7 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
 
     public void OnBattleButtonClicked()
     {
+        Debug.Log("BattleButtonClicked");
         battleButton.SetActive(false);
         cancelButton.SetActive(true);
         PhotonNetwork.JoinRandomRoom();

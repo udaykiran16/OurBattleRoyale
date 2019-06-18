@@ -29,6 +29,9 @@ public class PhotonRooms : MonoBehaviourPunCallbacks, IInRoomCallbacks
     private float atMaxPlayer;
     private float timeToStart;
 
+    //Player object
+    public GameObject myPlayer;
+
 
     private void Awake()
     {
@@ -212,7 +215,7 @@ public class PhotonRooms : MonoBehaviourPunCallbacks, IInRoomCallbacks
     [PunRPC]
     private void RPC_CreatePlayer()
     {
-        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PhotonNetworkPlayer"), transform.position, transform.rotation,0);
+        PhotonNetwork.Instantiate(myPlayer.name, transform.position, transform.rotation,0);
     }
 
 

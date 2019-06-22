@@ -1,0 +1,123 @@
+fileFormatVersion: 2
+guid: 02cc35d28f855094295eab4a3eb30556
+timeCreated: 1483477299
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: BrakeLights
+    100002: CanvasTop
+    100004: //RootNode
+    100006: doorobjects
+    100008: Glass
+    100010: glass01
+    100012: HeadLights
+    100014: InnerDoor
+    100016: jeeps
+    100018: MainBody
+    100020: PoterDoor
+    400000: BrakeLights
+    400002: CanvasTop
+    400004: //RootNode
+    400006: doorobjects
+    400008: Glass
+    400010: glass01
+    400012: HeadLights
+    400014: InnerDoor
+    400016: jeeps
+    400018: MainBody
+    400020: PoterDoor
+    2300000: BrakeLights
+    2300002: CanvasTop
+    2300004: doorobjects
+    2300006: Glass
+    2300008: glass01
+    2300010: HeadLights
+    2300012: InnerDoor
+    2300014: jeeps
+    2300016: MainBody
+    2300018: PoterDoor
+    3300000: BrakeLights
+    3300002: CanvasTop
+    3300004: doorobjects
+    3300006: Glass
+    3300008: glass01
+    3300010: HeadLights
+    3300012: InnerDoor
+    3300014: jeeps
+    3300016: MainBody
+    3300018: PoterDoor
+    4300000: jeeps
+    4300002: MainBody
+    4300004: PoterDoor
+    4300006: doorobjects
+    4300008: InnerDoor
+    4300010: Glass
+    4300012: glass01
+    4300014: CanvasTop
+    4300016: HeadLights
+    4300018: BrakeLights
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

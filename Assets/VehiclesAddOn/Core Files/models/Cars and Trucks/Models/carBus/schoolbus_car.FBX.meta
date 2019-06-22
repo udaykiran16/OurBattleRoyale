@@ -1,0 +1,173 @@
+fileFormatVersion: 2
+guid: ae753af3320430147886e5f5d61176c8
+timeCreated: 1483420687
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Archmodels55_11_black
+    100002: Archmodels55_11_chrome2
+    100004: Archmodels55_11_headlights_chrome
+    100006: Archmodels55_11_interior
+    100008: Archmodels55_11_mirrors
+    100010: Archmodels55_11_orange_lights
+    100012: Archmodels55_11_register_plate
+    100014: Archmodels55_11_rims_caps
+    100016: Archmodels55_11_stop_lights
+    100018: Archmodels55_11_stop_red
+    100020: Archmodels55_11_stop_white
+    100022: Archmodels55_11_white_glass
+    100024: BrakeLights
+    100026: Door1
+    100028: doorframes
+    100030: doorglass
+    100032: Glass
+    100034: headlights
+    100036: interior
+    100038: mainbody
+    100040: //RootNode
+    400000: Archmodels55_11_black
+    400002: Archmodels55_11_chrome2
+    400004: Archmodels55_11_headlights_chrome
+    400006: Archmodels55_11_interior
+    400008: Archmodels55_11_mirrors
+    400010: Archmodels55_11_orange_lights
+    400012: Archmodels55_11_register_plate
+    400014: Archmodels55_11_rims_caps
+    400016: Archmodels55_11_stop_lights
+    400018: Archmodels55_11_stop_red
+    400020: Archmodels55_11_stop_white
+    400022: Archmodels55_11_white_glass
+    400024: BrakeLights
+    400026: Door1
+    400028: doorframes
+    400030: doorglass
+    400032: Glass
+    400034: headlights
+    400036: interior
+    400038: mainbody
+    400040: //RootNode
+    2300000: Archmodels55_11_black
+    2300002: Archmodels55_11_chrome2
+    2300004: Archmodels55_11_headlights_chrome
+    2300006: Archmodels55_11_interior
+    2300008: Archmodels55_11_mirrors
+    2300010: Archmodels55_11_orange_lights
+    2300012: Archmodels55_11_register_plate
+    2300014: Archmodels55_11_rims_caps
+    2300016: Archmodels55_11_stop_lights
+    2300018: Archmodels55_11_stop_red
+    2300020: Archmodels55_11_stop_white
+    2300022: Archmodels55_11_white_glass
+    2300024: BrakeLights
+    2300026: Door1
+    2300028: doorframes
+    2300030: doorglass
+    2300032: Glass
+    2300034: headlights
+    2300036: interior
+    2300038: mainbody
+    3300000: Archmodels55_11_black
+    3300002: Archmodels55_11_chrome2
+    3300004: Archmodels55_11_headlights_chrome
+    3300006: Archmodels55_11_interior
+    3300008: Archmodels55_11_mirrors
+    3300010: Archmodels55_11_orange_lights
+    3300012: Archmodels55_11_register_plate
+    3300014: Archmodels55_11_rims_caps
+    3300016: Archmodels55_11_stop_lights
+    3300018: Archmodels55_11_stop_red
+    3300020: Archmodels55_11_stop_white
+    3300022: Archmodels55_11_white_glass
+    3300024: BrakeLights
+    3300026: Door1
+    3300028: doorframes
+    3300030: doorglass
+    3300032: Glass
+    3300034: headlights
+    3300036: interior
+    3300038: mainbody
+    4300000: Archmodels55_11_rims_caps
+    4300002: Archmodels55_11_interior
+    4300004: Glass
+    4300006: BrakeLights
+    4300008: Archmodels55_11_orange_lights
+    4300010: Archmodels55_11_black
+    4300012: Archmodels55_11_white_glass
+    4300014: interior
+    4300016: Archmodels55_11_register_plate
+    4300018: headlights
+    4300020: Archmodels55_11_headlights_chrome
+    4300022: Archmodels55_11_chrome2
+    4300024: Archmodels55_11_mirrors
+    4300026: Archmodels55_11_stop_white
+    4300028: Archmodels55_11_stop_red
+    4300030: Archmodels55_11_stop_lights
+    4300032: Door1
+    4300034: doorglass
+    4300036: doorframes
+    4300038: mainbody
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

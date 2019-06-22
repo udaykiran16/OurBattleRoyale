@@ -1,6 +1,5 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
-using Photon.Pun;
 namespace Invector.vEventSystems
 {    
 
@@ -46,7 +45,6 @@ namespace Invector.vEventSystems
             var attackReceiver = receiver.GetComponent<vIAttackReceiver>();
             if (attackReceiver != null) attackReceiver.OnReceiveAttack(damage, attacker);
             else receiver.ApplyDamage(damage);
-            if (receiver.transform.root.gameObject.GetComponent<PhotonView>() && receiver.transform.root.gameObject.GetComponent<PhotonView>().IsMine == false) { receiver.transform.root.gameObject.GetComponent<PhotonView>().RPC("ApplyDamage", RpcTarget.Others, JsonUtility.ToJson(damage)); }
         }
         
         /// <summary>

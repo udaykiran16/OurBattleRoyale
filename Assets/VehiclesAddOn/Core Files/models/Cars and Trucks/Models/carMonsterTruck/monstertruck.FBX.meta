@@ -1,0 +1,232 @@
+fileFormatVersion: 2
+guid: 41cfbb706cea2ce4395ace6e89503fa9
+timeCreated: 1473989276
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: body
+    100002: brigeFLrods
+    100004: brigeFront
+    100006: brigeFRrods
+    100008: brigeRear
+    100010: brigeRFrods
+    100012: brigeRLrods
+    100014: door
+    100016: exhaust
+    100018: FLLowerArm
+    100020: FLowerDrive
+    100022: FLUpperArm
+    100024: frame
+    100026: FRLowerArm
+    100028: FRUpperArm
+    100030: FUpperDrive
+    100032: MonsterTruck
+    100034: //RootNode
+    100036: pipes
+    100038: RLLowerArm
+    100040: RLowerDirve
+    100042: RLUpperArm
+    100044: RollCage
+    100046: RRLowerArm
+    100048: RRUpperArm
+    100050: RUpperDrive
+    100052: Texture Group
+    100054: uppershock
+    100056: v8
+    100058: wheel_lb
+    100060: wheel_lb_p
+    100062: wheel_lf
+    100064: wheel_lf_p
+    100066: wheel_rb
+    100068: wheel_rb_p
+    100070: wheel_rf
+    100072: wheel_rf_p
+    400000: body
+    400002: brigeFLrods
+    400004: brigeFront
+    400006: brigeFRrods
+    400008: brigeRear
+    400010: brigeRFrods
+    400012: brigeRLrods
+    400014: door
+    400016: exhaust
+    400018: FLLowerArm
+    400020: FLowerDrive
+    400022: FLUpperArm
+    400024: frame
+    400026: FRLowerArm
+    400028: FRUpperArm
+    400030: FUpperDrive
+    400032: MonsterTruck
+    400034: //RootNode
+    400036: pipes
+    400038: RLLowerArm
+    400040: RLowerDirve
+    400042: RLUpperArm
+    400044: RollCage
+    400046: RRLowerArm
+    400048: RRUpperArm
+    400050: RUpperDrive
+    400052: Texture Group
+    400054: uppershock
+    400056: v8
+    400058: wheel_lb
+    400060: wheel_lb_p
+    400062: wheel_lf
+    400064: wheel_lf_p
+    400066: wheel_rb
+    400068: wheel_rb_p
+    400070: wheel_rf
+    400072: wheel_rf_p
+    2300000: body
+    2300002: brigeFLrods
+    2300004: brigeFront
+    2300006: brigeFRrods
+    2300008: brigeRear
+    2300010: brigeRFrods
+    2300012: brigeRLrods
+    2300014: door
+    2300016: FLLowerArm
+    2300018: FLowerDrive
+    2300020: FLUpperArm
+    2300022: frame
+    2300024: FRLowerArm
+    2300026: FRUpperArm
+    2300028: FUpperDrive
+    2300030: pipes
+    2300032: RLLowerArm
+    2300034: RLowerDirve
+    2300036: RLUpperArm
+    2300038: RollCage
+    2300040: RRLowerArm
+    2300042: RRUpperArm
+    2300044: RUpperDrive
+    2300046: uppershock
+    2300048: v8
+    2300050: wheel_lb
+    2300052: wheel_lf
+    2300054: wheel_rb
+    2300056: wheel_rf
+    3300000: body
+    3300002: brigeFLrods
+    3300004: brigeFront
+    3300006: brigeFRrods
+    3300008: brigeRear
+    3300010: brigeRFrods
+    3300012: brigeRLrods
+    3300014: door
+    3300016: FLLowerArm
+    3300018: FLowerDrive
+    3300020: FLUpperArm
+    3300022: frame
+    3300024: FRLowerArm
+    3300026: FRUpperArm
+    3300028: FUpperDrive
+    3300030: pipes
+    3300032: RLLowerArm
+    3300034: RLowerDirve
+    3300036: RLUpperArm
+    3300038: RollCage
+    3300040: RRLowerArm
+    3300042: RRUpperArm
+    3300044: RUpperDrive
+    3300046: uppershock
+    3300048: v8
+    3300050: wheel_lb
+    3300052: wheel_lf
+    3300054: wheel_rb
+    3300056: wheel_rf
+    4300000: RollCage
+    4300002: brigeRLrods
+    4300004: brigeRear
+    4300006: RRLowerArm
+    4300008: RLLowerArm
+    4300010: RLowerDirve
+    4300012: brigeFRrods
+    4300014: brigeFront
+    4300016: FLLowerArm
+    4300018: FLowerDrive
+    4300020: FRLowerArm
+    4300022: brigeRFrods
+    4300024: brigeFLrods
+    4300026: frame
+    4300028: FRUpperArm
+    4300030: RLUpperArm
+    4300032: RRUpperArm
+    4300034: RUpperDrive
+    4300036: FUpperDrive
+    4300038: FLUpperArm
+    4300040: uppershock
+    4300042: body
+    4300044: v8
+    4300046: wheel_rb
+    4300048: wheel_lb
+    4300050: wheel_rf
+    4300052: wheel_lf
+    4300054: pipes
+    4300056: door
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

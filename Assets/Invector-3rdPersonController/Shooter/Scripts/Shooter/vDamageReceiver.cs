@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Invector.vCharacterController
 {
@@ -7,11 +7,9 @@ namespace Invector.vCharacterController
     public partial class vDamageReceiver : vMonoBehaviour, vIAttackReceiver
     {
         
-        //private vIHealthController healthController;
-        protected vIHealthController healthController;
+        private vIHealthController healthController;
 
-        //public void OnReceiveAttack(vDamage damage, vIMeleeFighter attacker)
-        public virtual void OnReceiveAttack(vDamage damage, vIMeleeFighter attacker)
+        public void OnReceiveAttack(vDamage damage, vIMeleeFighter attacker)
         {            
             if (overrideReactionID)
                 damage.reaction_id = reactionID;

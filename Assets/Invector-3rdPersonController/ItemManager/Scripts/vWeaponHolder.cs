@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Invector
 {
@@ -22,8 +22,7 @@ namespace Invector
         private bool isWeaponActive;
         public bool inUse { get { return isHolderActve && !isWeaponActive; } }
 
-        //public void SetActiveHolder(bool active)
-        public virtual void SetActiveHolder(bool active)
+        public void SetActiveHolder(bool active)
         {
             if (holderObject)
             {
@@ -32,8 +31,7 @@ namespace Invector
             isHolderActve = active;
         }
 
-        //public void SetActiveWeapon(bool active)
-        public virtual void SetActiveWeapon(bool active)
+        public void SetActiveWeapon(bool active)
         {
             if (weaponObject)
             {

@@ -14,7 +14,7 @@ public class Compass : MonoBehaviour
 
     public void GetMyPlayer()
     {
-        Player = FindObjectOfType<PUN_ThirdPersonController>().transform;
+    //    Player = FindObjectOfType<PUN_ThirdPersonController>().transform;
         activateCompass = true;
 
     }

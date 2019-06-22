@@ -1,0 +1,135 @@
+fileFormatVersion: 2
+guid: 102976493b989b24a87b644f493614b7
+timeCreated: 1483464049
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: brigeRear
+    100002: //RootNode
+    100004: Door01
+    100006: doorin
+    100008: exhaust
+    100010: frame
+    100012: HeadLights
+    100014: insids
+    100016: lights
+    100018: lights1
+    100020: MainBody
+    100022: RollCage
+    100024: uppershock
+    100026: v8
+    400000: brigeRear
+    400002: //RootNode
+    400004: Door01
+    400006: doorin
+    400008: exhaust
+    400010: frame
+    400012: HeadLights
+    400014: insids
+    400016: lights
+    400018: lights1
+    400020: MainBody
+    400022: RollCage
+    400024: uppershock
+    400026: v8
+    2300000: brigeRear
+    2300002: Door01
+    2300004: doorin
+    2300006: frame
+    2300008: HeadLights
+    2300010: insids
+    2300012: lights
+    2300014: lights1
+    2300016: MainBody
+    2300018: RollCage
+    2300020: uppershock
+    2300022: v8
+    3300000: brigeRear
+    3300002: Door01
+    3300004: doorin
+    3300006: frame
+    3300008: HeadLights
+    3300010: insids
+    3300012: lights
+    3300014: lights1
+    3300016: MainBody
+    3300018: RollCage
+    3300020: uppershock
+    3300022: v8
+    4300000: RollCage
+    4300002: brigeRear
+    4300004: frame
+    4300006: uppershock
+    4300008: v8
+    4300010: MainBody
+    4300012: doorin
+    4300014: lights
+    4300016: lights1
+    4300018: insids
+    4300020: Door01
+    4300022: HeadLights
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

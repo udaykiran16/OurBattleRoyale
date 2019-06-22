@@ -1,0 +1,133 @@
+fileFormatVersion: 2
+guid: e55d5219c60695b4d9ce161c6e6803a9
+timeCreated: 1473294693
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Boat_boat_
+    100004: Boat_bowBo
+    100006: Boat_bowTo
+    100008: Boat_mast1
+    100010: Boat_mast2
+    100012: Boat_rail0
+    100014: Boat_rail1
+    100016: Boat_rail2
+    100018: Boat_rail3
+    100020: Boat_rail4
+    100022: Boat_rails
+    100024: smdimport
+    400000: //RootNode
+    400002: Boat_boat_
+    400004: Boat_bowBo
+    400006: Boat_bowTo
+    400008: Boat_mast1
+    400010: Boat_mast2
+    400012: Boat_rail0
+    400014: Boat_rail1
+    400016: Boat_rail2
+    400018: Boat_rail3
+    400020: Boat_rail4
+    400022: Boat_rails
+    400024: smdimport
+    2300000: Boat_boat_
+    2300002: Boat_bowBo
+    2300004: Boat_bowTo
+    2300006: Boat_mast1
+    2300008: Boat_mast2
+    2300010: Boat_rail0
+    2300012: Boat_rail1
+    2300014: Boat_rail2
+    2300016: Boat_rail3
+    2300018: Boat_rail4
+    2300020: Boat_rails
+    2300022: smdimport
+    3300000: Boat_boat_
+    3300002: Boat_bowBo
+    3300004: Boat_bowTo
+    3300006: Boat_mast1
+    3300008: Boat_mast2
+    3300010: Boat_rail0
+    3300012: Boat_rail1
+    3300014: Boat_rail2
+    3300016: Boat_rail3
+    3300018: Boat_rail4
+    3300020: Boat_rails
+    3300022: smdimport
+    4300000: Boat_boat_
+    4300002: Boat_bowBo
+    4300004: Boat_bowTo
+    4300006: Boat_mast2
+    4300008: Boat_mast1
+    4300010: Boat_rails
+    4300012: Boat_rail0
+    4300014: Boat_rail1
+    4300016: Boat_rail2
+    4300018: Boat_rail3
+    4300020: Boat_rail4
+    4300022: smdimport
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -279,7 +279,7 @@ namespace Invector.vCharacterController
             ControlCapsuleHeight();
             ControlJumpBehaviour();
             //ControlLocomotion();
-            StaminaRecovery();
+          //  StaminaRecovery();
             HealthRecovery();
         }
 

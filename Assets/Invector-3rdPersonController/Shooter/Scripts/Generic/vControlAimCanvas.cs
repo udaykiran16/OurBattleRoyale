@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
@@ -106,8 +106,7 @@ namespace Invector.vShooter
         /// </summary>
         /// <param name="wordPosition">Word Position</param>
         /// <param name="validPoint">Set if Aim is Valid</param>
-        //public void SetWordPosition(Vector3 wordPosition, bool validPoint = true)
-        public virtual void SetWordPosition(Vector3 wordPosition, bool validPoint = true)
+        public void SetWordPosition(Vector3 wordPosition, bool validPoint = true)
         {
             if (currentAimCanvas == null) return;
 

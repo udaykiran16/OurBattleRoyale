@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -32,7 +32,8 @@ namespace Invector.vItemManager
         #endregion
 
         internal bool inEquip;
-        private float equipTimer;
+        //private float equipTimer;
+        protected float equipTimer;
         private Animator animator;
         private static vItemManager instance;
 
@@ -656,7 +657,8 @@ namespace Invector.vItemManager
             }            
         }
 
-        IEnumerator EquipItemRoutine(EquipPoint equipPoint, vItem item)
+        //IEnumerator EquipItemRoutine(EquipPoint equipPoint, vItem item)
+        protected virtual IEnumerator EquipItemRoutine(EquipPoint equipPoint, vItem item)
         {
             if (!inEquip)
             {
@@ -753,7 +755,8 @@ namespace Invector.vItemManager
             }
         }
 
-        IEnumerator UnequipItemRoutine(EquipPoint equipPoint, vItem item)
+        //IEnumerator UnequipItemRoutine(EquipPoint equipPoint, vItem item)
+        protected virtual IEnumerator UnequipItemRoutine(EquipPoint equipPoint, vItem item)
         {
             if (!inEquip)
             {

@@ -3,7 +3,7 @@ using System.Collections;
 using Invector.vCharacterController;
 namespace Invector.CharacterController
 {
-    public class v_car_camera_control : vMeleeCombatInput
+    public class v_car_camera_control : vThirdPersonInput
     {
         [HideInInspector]
         public bool isdriving;
@@ -24,33 +24,6 @@ namespace Invector.CharacterController
         }
         void LateUpdate()
         {
-     
-            #region If Player is not driving 
-
-                #region If Vehicle is in Garage 
-                if (this.GetComponentInParent<V_car_user>().inGarage && doCamOnce == true)
-            {
-                lastState = tpCamera.currentStateName;
-                tpCamera.ChangeState(this.GetComponentInParent<V_car_user>().CarCameraStateSystem.inGarage_camerastate, true);
-                doCamOnce = false;
-            }
-            #endregion
-
-            #region If Vehicle is not in Garage 
-            if (this.GetComponentInParent<V_car_user>().inGarage == false &&  doCamOnce == false)
-            {
-                if (tpCamera)
-                {
-                    tpCamera.ChangeState(this.GetComponentInParent<V_car_user>().CarCameraStateSystem.inGarage_camerastate, false);
-                    tpCamera.ChangeState(lastState, true);
-
-                    doCamOnce = true;
-                }
-
-            }
-            #endregion
-
-            #endregion
 
             //========================================================================//
             #region If Player is driving 
@@ -67,7 +40,7 @@ namespace Invector.CharacterController
                     if (this.GetComponentInParent<V_car_user>().currCar.GetComponent<V_CarControl>() != null )
                         {
                         // turn off any residual camera states from Garage mode
-                        tpCamera.ChangeState(this.GetComponentInParent<V_car_user>().CarCameraStateSystem.inGarage_camerastate, false);
+                       // tpCamera.ChangeState(this.GetComponentInParent<V_car_user>().CarCameraStateSystem.inGarage_camerastate, false);
                         
                         #region Large Vehicle Camera State
                         // if this vehicle is of the LARGE variety
@@ -93,9 +66,14 @@ namespace Invector.CharacterController
                         else if (this.GetComponentInParent<V_car_user>().currCar.GetComponent<V_CarControl>().CarCamStateSystem.isMediumVehicle)
                             {
                             // set target of camera to vehicle instead of player (looks better)
-                            tpCamera.SetTarget(this.GetComponentInParent<V_car_user>().currCar.transform);
-                            tpCamera.ChangeState(this.GetComponentInParent<V_car_user>().CarCameraStateSystem.mediumcar_cameraState, true);
-                            }
+                            this.ResetCameraState();
+                           // tpCamera.SetTarget(this.GetComponentInParent<V_car_user>().currCar.transform);
+                         tpCamera.ChangeState(this.GetComponentInParent<V_car_user>().CarCameraStateSystem.mediumcar_cameraState, true);
+                         //   this.customCameraState = "DrivingMediumVehicle";
+                            this.changeCameraState = true;
+                            this.smoothCameraState = true;
+                            this.ResetCameraState();
+                        }
                         #endregion
 
                         #region Default Vehicle Camera State
@@ -198,8 +176,10 @@ namespace Invector.CharacterController
                             // if this vehicle is of the MEDIUM variety
                             else if (this.GetComponentInParent<V_car_user>().currCar.GetComponent<V_CarControl>().CarCamStateSystem.isMediumVehicle)
                             {
+                            this.ResetCameraState();
                             tpCamera.ChangeState(this.GetComponentInParent<V_car_user>().CarCameraStateSystem.mediumcar_cameraState, false);
-                            }
+                            this.ResetCameraState();
+                        }
                             // if this vehicle is of the default car variety
                             else
                             {

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace Invector.vCharacterController.vActions
@@ -75,7 +75,8 @@ namespace Invector.vCharacterController.vActions
                 TriggerEnterLadder();
         }
 
-        void TriggerEnterLadder()
+        //void TriggerEnterLadder()
+        protected virtual void TriggerEnterLadder()
         {
             if (debugMode) Debug.Log("Enter Ladder");
 
@@ -140,7 +141,8 @@ namespace Invector.vCharacterController.vActions
             }
         }
 
-        void ExitLadderInput()
+        //void ExitLadderInput()
+        protected virtual void ExitLadderInput()
         {
             if (!isUsingLadder) return;
             if (tpInput.cc.baseLayerInfo.IsName("EnterLadderTop") || tpInput.cc.baseLayerInfo.IsName("EnterLadderBottom")) return;
@@ -195,7 +197,8 @@ namespace Invector.vCharacterController.vActions
             }
         }
 
-        void ResetPlayerSettings()
+        //void ResetPlayerSettings()
+        protected virtual void ResetPlayerSettings()
         {
             if (debugMode) Debug.Log("Reset Player Settings");
             speed = 0f;

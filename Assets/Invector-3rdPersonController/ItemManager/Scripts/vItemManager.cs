@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;               //to acces Photon features
+using Photon.Realtime;
 
 namespace Invector.vItemManager
 {
@@ -693,7 +695,8 @@ namespace Invector.vItemManager
                         }
                         var point = equipPoint.handler.customHandlers.Find(p => p.name == item.customHandler);
                         var equipTransform = point != null ? point : equipPoint.handler.defaultHandler;
-                        var equipedObject = Instantiate(item.originalObject, equipTransform.position, equipTransform.rotation) as GameObject;
+                        //  var equipedObject = Instantiate(item.originalObject, equipTransform.position, equipTransform.rotation) as GameObject;
+                        var equipedObject= PhotonNetwork.Instantiate(item.originalObject.name, equipTransform.position, equipTransform.rotation) as GameObject;
 
                         equipedObject.transform.parent = equipTransform;
 

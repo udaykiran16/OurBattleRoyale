@@ -26,7 +26,7 @@ public class BRS_PlaneDropManager : MonoBehaviour
         PD_L = new Vector3[9];
         PD_R = new Vector3[9];
 
-        var _MapSize = 8000;//MapSize * 500;
+        var _MapSize = MapSize * 1000;//MapSize * 500;
         var setupPosition = new Vector3(-_MapSize, BRS_PlaneAltitude, _MapSize);
 
         for (int i = 0; i < PD_L.Length; i++)

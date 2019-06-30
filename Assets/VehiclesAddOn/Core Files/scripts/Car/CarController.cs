@@ -40,7 +40,7 @@ namespace UnityStandardAssets.Vehicles.Car
         [SerializeField]
         private float m_FullTorqueOverAllWheels;
         [SerializeField]
-        private float m_ReverseTorque;
+        public float m_ReverseTorque;
         [SerializeField]
         private float m_MaxHandbrakeTorque;
         [SerializeField]
